@@ -1,0 +1,9 @@
+syntax="proto3";
+
+message CPU {
+    string brand = 1;
+    // Name of CPU
+    string name = 2;
+    uint32 number_of_threads = 4;
+    double max_ghz = 6;
+}
