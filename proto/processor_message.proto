@@ -1,9 +1,23 @@
 syntax="proto3";
 
-message CPU {
-    string brand = 1;
-    // Name of CPU
-    string name = 2;
-    uint32 number_of_threads = 4;
-    double max_ghz = 6;
-}
+
+package processor_message;
+
+option go_package = "github.com/Xebec19/stunning-eureka/proto/processor_message";
+// The greeting service definition.
+service Greeter {
+    // Sends a greeting
+    rpc SayHello (HelloRequest) returns (HelloReply) {}
+    // Sends another greeting
+    rpc SayHelloAgain (HelloRequest) returns (HelloReply) {}
+  }
+  
+  // The request message containing the user's name.
+  message HelloRequest {
+    string name = 1;
+  }
+  
+  // The response message containing the greetings
+  message HelloReply {
+    string message = 1;
+  }
