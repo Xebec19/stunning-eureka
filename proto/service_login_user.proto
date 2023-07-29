@@ -1,0 +1,12 @@
+syntax="proto3";
+
+package processor_message;
+
+import "google/protobuf/timestamp.proto";
+import "rpc_login_user.proto";
+
+option go_package = "github.com/Xebec19/stunning-eureka/pb";
+
+service Login {
+    rpc LoginUser (LoginUserResponse) returns (LoginUserResponse) {}
+}

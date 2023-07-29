@@ -2,14 +2,16 @@ syntax="proto3";
 
 package processor_message;
 
-import "google/protobuf/timestamp.proto";
+import "processor_message.proto";
 
 option go_package = "github.com/Xebec19/stunning-eureka/pb";
 
-message User {
+message CreateUserRequest {
     string username = 1;
     string full_name = 2;
     string email = 3;
-    google.protobuf.Timestamp password_changed_at = 4;
-    google.protobuf.Timestamp created_at = 5;
+}
+
+message CreateUserResponse {
+    User user = 1;
 }

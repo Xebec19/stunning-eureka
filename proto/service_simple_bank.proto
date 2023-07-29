@@ -1,0 +1,14 @@
+syntax="proto3";
+
+package processor_message;
+
+import "google/protobuf/timestamp.proto";
+import "rpc_create_user.proto";
+import "rpc_login_user.proto";
+
+option go_package = "github.com/Xebec19/stunning-eureka/pb";
+
+service SimpleBank {
+    rpc CreateUser (CreateUserRequest) returns (CreateUserResponse) {}
+    rpc LoginUser (LoginUserResponse) returns (LoginUserResponse) {}
+}
